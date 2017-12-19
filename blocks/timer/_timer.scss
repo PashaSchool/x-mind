@@ -1,0 +1,42 @@
+.timer-wrapper {
+	height: 550px;
+	background-color: $yellow;
+}
+
+.timer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	div {
+		display: flex;
+	}
+}
+
+.time-box {
+	border-radius: 12px;
+	margin: 0 6px;
+	display: block;
+	width: 68px;
+	height: 102px;
+	background-color: $dark;
+	color: #fff;
+	font-size: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#days, #hours, #minutes {
+	margin-right: 10px;
+	position: relative;
+	&:after {
+		content: ':';
+		display: block;
+		font-size: 75px;
+		color: $dark;
+		padding-left: 7px;
+
+	}
+}
