@@ -3,13 +3,20 @@
   margin: 0;
   box-sizing: border-box; }
 
+ul {
+  list-style-type: none; }
+
 body {
-  font-family: "Tahome", "sans-sarif"; }
+  font-family: 'Montserrat', sans-serif; }
 
 .container-x-min {
   margin: 0 auto;
   width: 100%;
   max-width: 1280px; }
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url("../font/Montserrat-Medium.ttf"); }
 
 .intro-section {
   padding: 27px 75px 0px 75px;
@@ -228,8 +235,88 @@ body {
   height: 460px; }
 
 .tickets-wrapper {
-  background-color: red;
-  height: 100px; }
+  padding: 75px 0;
+  display: flex;
+  justify-content: center; }
+
+.ticket-box {
+  width: 830px;
+  background-color: #e4e4e4;
+  display: flex; }
+
+.label-side {
+  background-color: #e4abf0;
+  width: 86px;
+  position: relative; }
+  .label-side:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -4px;
+    bottom: -5px; }
+  .label-side:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -5px; }
+
+.ticket-label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px dotted #fff;
+  overflow: hidden; }
+  .ticket-label__text {
+    color: #fff;
+    font-size: 40px;
+    display: block;
+    letter-spacing: 3px;
+    transform: rotate(270deg); }
+
+.ticket-content {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  background-color: #d7d7d7; }
+  .ticket-content__ticket {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e4e4; }
+  .ticket-content__ticket-header {
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #656565; }
+  .ticket-content__req-list {
+    flex-grow: 2;
+    margin: 10px 45px;
+    list-style-type: circle;
+    color: #656565; }
+  .ticket-content__item {
+    line-height: 1.4; }
+  .ticket-content__price {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+    color: #656565;
+    font-weight: 600; }
+    .ticket-content__price:after {
+      color: #656565;
+      content: "$";
+      margin-left: 4px; }
 
 .footer {
   display: block;

@@ -1,2 +1,16 @@
 +b.tickets-wrapper
-	| Tickewt
+	+b.ticket-box
+		+b.label-side
+			+b.ticket-label
+				+e.text-wrapper
+					+e.text Tickets
+		+b.ticket-content
+			each ticket in content.tickets
+				+e.ticket 
+					+e.ticket-header
+						| #{ticket.header}
+					+e.UL.req-list
+						each item in ticket.requirements
+							+e.item #{item}
+					+e.price
+						| #{ticket.price}

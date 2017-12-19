@@ -1,4 +1,99 @@
 .tickets-wrapper {
-	background-color: red;
-	height: 100px;
+	padding: 75px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.ticket-box {
+	width: 830px;
+	// height: 285px;
+	background-color: $grey;
+	display: flex;
+}
+
+.label-side {
+	background-color: $pink;
+	width: 86px;
+	position: relative;
+	&:after {
+		content: "";
+		width: 10px;
+		height: 10px;
+		background-color: #fff;
+		display: block;
+		position: absolute;
+		transform: rotate(45deg);
+		right: -4px;
+		bottom: -5px;
+	}
+	&:before {
+		content: '';
+		width: 10px;
+		height: 10px;
+		background-color: #fff;
+		transform: rotate(45deg);
+		display: block;
+		position: absolute;
+		right: -4px;
+		top: -5px;
+	}
+	
+}
+.ticket-label {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 2px dotted #fff;
+	overflow: hidden;
+	&__text {
+		color: #fff;
+		font-size: 40px;
+		display: block;
+		letter-spacing: 3px;
+		transform: rotate(270deg);
+	}
+}
+
+.ticket-content {
+	width: 100%;
+	justify-content: space-between;
+	display: flex;
+	background-color: darken($grey, 5);
+	&__ticket {
+		width: 33%;
+		display: flex;
+		flex-direction: column;
+		background-color: $grey;
+	}
+
+	&__ticket-header {
+		padding: 20px 0;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+		color: darken($grey, 50);
+	}
+	&__req-list {
+		flex-grow: 2;
+		margin: 10px 45px;
+		list-style-type: circle;
+		color: darken($grey, 50);
+	}
+	&__item {
+		line-height: 1.4;
+	}
+	&__price {
+		font-size: 30px;
+		text-align: center;
+		padding: 20px 0;
+		color: darken($grey, 50);
+		font-weight: 600;
+		&:after {
+			color: darken($grey, 50);
+			content: "$";
+			margin-left: 4px;
+		}
+	}
 }

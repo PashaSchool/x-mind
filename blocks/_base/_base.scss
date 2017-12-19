@@ -3,13 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+ul {
+	list-style-type: none;
+}
 body {
-    font-family: $baseFont;
+    font-family: 'Montserrat', sans-serif;
 }
 .container-x-min {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1280px;
 	
+}
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../font/Montserrat-Medium.ttf');
 }

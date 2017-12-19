@@ -1,3 +1,17 @@
 {
-	"content" : "Here is some content :D"
+	"tickets" : [
+		{
+			"header" : "noTitile",
+			"requirements" : ["lorem ipsum", "lorem ipsum", "lorem ipsum", "lorem ipsum","lorem ipsum", "lorem ipsum", "lorem ipsum"],
+			"price": "160"
+		},{
+			"header" : "noTitile",
+			"requirements" : ["lorem ipsum", "lorem ipsum","lorem ipsum", "lorem ipsum", "lorem ipsum"],
+			"price": "240"
+		},{
+			"header" : "noTitile",
+			"requirements" : ["lorem ipsum", "lorem ipsum", "lorem ipsum", "lorem ipsum", "lorem ipsum"],
+			"price": "400"
+		}
+	]
 }
