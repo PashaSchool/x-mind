@@ -1,0 +1,30 @@
+- var n = 0;
+- var m = 0;
+
++b.pre-footer
+	+b.sponsors
+		+b.H4.header
+			| Sponsors
+		+b.carusel-wrapper
+			.wrapper-carusel.sponsors
+				.next
+				.prev
+				.owl-carousel.sponsor-carusel
+					while n < 12
+						- n++
+						.item
+							+b.sposor-container
+								+e.sponsor
+	+b.partners
+		+b.H4.header
+			| Partners
+		+b.carusel-wrapper
+			.wrapper-carusel.partners
+				.next
+				.prev
+				.owl-carousel.partners-carusel
+					while m < 12
+						- m++
+						.item
+							+b.partners-container
+								+e.partners

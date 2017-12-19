@@ -1,0 +1,36 @@
+.pre-footer {
+	padding: 70px 150px;
+}
+
+.pre-footer {
+	.header {
+		font-weight: bolder;
+		font-size: 65px;
+		color: $pink;
+		text-align: center;
+	}
+}
+.sposor-container {
+	width: 200px;
+	height: 200px;
+
+	&__sponsor {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-image: url(../img/uku.png);
+	}
+}
+
+
+.partners-container {
+	width: 200px;
+	height: 200px;
+
+	&__partners {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-image: url(../img/uku.png);
+	}
+}

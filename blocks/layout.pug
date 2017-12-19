@@ -1,0 +1,14 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+
+doctype html
+html(lang='en')
+	head
+		include head/head
+	body
+		.container-x-min
+			block content
+			block footer
+				include footer/footer
+			

@@ -1,0 +1,58 @@
+.intro-section {
+	padding: 27px 75px 0px 75px;
+	width: 100%;
+
+	background-color: $grey;
+	background-position: center;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	background-image: url(../img/intro.png);
+	&:after {
+		content: '';
+		padding-top: 50%;
+		display: block;
+	}
+}
+
+.top-line {
+	padding: 0 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.buy-ticket-wrapper {
+	&__btn {
+		background-color: $btnBg;
+		color: $btnColor;
+		font-size: 31px;
+		border: none;
+		padding: 3px 8px;
+		border-radius: 10px;
+	}
+}
+
+.social-icons-wrapper{
+	display: flex;
+	&__icon-link {
+		margin-right: 24px;
+		width: 42px;
+		height: 42px;
+		span {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-size: cover;
+		}
+	}
+	&__icon-vk {
+		background-image: url(../img/vk.png);
+	}
+	&__icon-insta {
+		background-image: url(../img/instagram.png);
+	}
+	&__icon-fb {
+		background-image: url(../img/facebook.png);
+	}
+}

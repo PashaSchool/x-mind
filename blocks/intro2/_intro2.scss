@@ -1,0 +1,36 @@
+.intro-wrapper-text {
+	padding: 20px 150px 35px 150px;
+}
+
+.header {
+
+	&__text-h {
+		font-weight: bold;
+		font-size: 26px;
+		text-align: center;
+	}
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.text-contant-wrapper {
+	&__text-p {
+		font-size: 21px;
+		padding-bottom: 15px;
+		padding-top: 15px;
+	}
+}
+
+.bottom-logo{
+	display: flex;
+	justify-content: center;
+	&__logo {
+		width: 50px;
+		height: 50px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-image: url(../img/mini_logo.png);
+	}
+}

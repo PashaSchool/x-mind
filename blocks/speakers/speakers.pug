@@ -1,0 +1,14 @@
+- var n = 0;
+
++b.speakers-wrapper
+	+b.header-speaker Speakers
+	+b.carusel-wrapper
+		.wrapper-carusel.speakers
+			.next
+			.prev
+			.owl-carousel.speakers-carusel
+				while n < 12
+					- n++
+					.item
+						+b.speaker-container
+							+e.speaker
