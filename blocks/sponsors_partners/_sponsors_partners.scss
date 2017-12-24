@@ -1,5 +1,9 @@
 .pre-footer {
-	padding: 70px 150px;
+	// display: none;
+	padding: 0;
+	@include breakpoint("mobile") {
+		padding: 70px 150px;
+	}
 }
 
 .pre-footer {

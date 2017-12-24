@@ -1,7 +1,10 @@
 .tickets-wrapper {
-	padding: 75px 0;
-	display: flex;
-	justify-content: center;
+	display: none;
+	// @include breakpoint("iphone") {
+	// padding: 75px 0;
+	// display: flex;
+	// justify-content: center;
+	// }
 }
 
 .ticket-box {
@@ -37,7 +40,6 @@
 		right: -4px;
 		top: -5px;
 	}
-	
 }
 .ticket-label {
 	width: 100%;

@@ -1,6 +1,8 @@
 .timer-wrapper {
 	height: 550px;
 	background-color: $yellow;
+	@include breakpoint("iphone") {
+	}
 }
 
 .timer {
@@ -15,28 +17,49 @@
 }
 
 .time-box {
-	border-radius: 12px;
-	margin: 0 6px;
+	border-radius: none;
+	margin: 0;
 	display: block;
-	width: 68px;
-	height: 102px;
+	width: 30px;
+	height: 45px;
 	background-color: $dark;
 	color: #fff;
-	font-size: 75px;
+	font-size: 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@include breakpoint("iphone") {
+		width: 68px;
+		height: 102px;
+		font-size: 75px;
+		margin: 0 6px;
+		border-radius: 12px;
+	}
 }
 
 #days, #hours, #minutes {
-	margin-right: 10px;
+	margin-right: none;
 	position: relative;
 	&:after {
 		content: ':';
-		display: block;
-		font-size: 75px;
-		color: $dark;
-		padding-left: 7px;
+		font-size: 24px;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		padding: 0;
+		background-color: $dark;
 
+	}
+	@include breakpoint("iphone") {
+		margin-right: 10px;
+		&:after {
+			content: ':';
+			display: block;
+			font-size: 75px;
+			background-color: transparent;
+			color: $dark;
+			padding-left: 7px;
+	
+		}
 	}
 }

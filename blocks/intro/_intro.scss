@@ -1,14 +1,21 @@
 .intro-section {
-	padding: 27px 75px 0px 75px;
-	width: 100%;
-
-	background-color: $grey;
-	background-position: center;
+	padding-top: 170px;
 	position: relative;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
-
 	background-image: url(../img/intro.png);
+	background-color: $grey;
+	background-position: bottom;
+	@include breakpoint("iphone") {
+		padding-top: 250px;
+	}
+
+	@include breakpoint("mobile"){
+		padding: 27px 75px 0px 75px;
+		position: relative;
+		background-position: center;
+	}
 	&:after {
 		content: '';
 		padding-top: 50%;
@@ -17,24 +24,62 @@
 }
 
 .top-line {
-	padding: 0 80px;
+	position: absolute;
+	top: 0;
+	padding: 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
+
+	@include breakpoint("mobile") {
+		padding: 0 80px;
+		position: static;
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 0;
+	}
+	@include breakpoint("small") {
+	}
 }
 .buy-ticket-wrapper {
+	width: 100%;
+	padding: 0 10px;
+	@include breakpoint("iphone") {
+		padding: 20px 10px;
+	}
+	@include breakpoint("mobile") {
+
+	}
 	&__btn {
+		display: block;
+		@include breakpoint("mobile") {
+			padding: 3px 8px;
+			max-width: 170px;
+			margin-left: auto;
+		}
+		@include breakpoint("iphone") {
+			padding: 8px;
+		}
 		background-color: $btnBg;
 		color: $btnColor;
 		font-size: 31px;
 		border: none;
 		padding: 3px 8px;
 		border-radius: 10px;
+		width: 100%;
+		
 	}
 }
 
 .social-icons-wrapper{
 	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+	@include breakpoint("iphone") {
+
+	}
 	&__icon-link {
 		margin-right: 24px;
 		width: 42px;

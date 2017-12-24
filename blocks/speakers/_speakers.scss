@@ -1,8 +1,10 @@
 .speakers-wrapper {
 	background-color: $yellow;
-	padding: 70px 150px;
-	
+	padding: 10px;
 	position: relative;
+	@include breakpoint("mobile") {
+		padding: 70px 150px;
+	}
 }
 
 .header-speaker {
@@ -19,6 +21,7 @@
 
 }
 .prev {
+	display: none;
 	position: absolute;
 	top: calc(50% - 40px);	
 	left: -50px;
@@ -29,11 +32,15 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: $grey;
+	@include breakpoint("mobile") {
+		display: block;
+	}
 	&:hover {
 		cursor: pointer;
 	}
 }
 .next {
+	display: none;
 	position: absolute;
 	top: calc(50% - 40px);
 	right: -50px;
@@ -44,6 +51,9 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: $grey;
+	@include breakpoint("mobile") {
+		display: block;
+	}
 
 	&:hover {
 		cursor: pointer;
@@ -60,4 +70,29 @@
 		background-size: cover;
 		background-image: url(../img/speaker.png);
 	}
+}
+
+.owl-theme .owl-controls .owl-page {
+    display: inline-block;
+}
+.owl-dots {
+	display: flex;
+	justify-content: center;
+}
+.owl-dot {
+	background-color: darken($yellow, 80);
+	border-radius: 20px;
+    display: block;
+    height: 12px;
+    margin: 5px 7px;
+    opacity: 0.5;
+    width: 12px;
+}
+.owl-dot.active {
+	background-color: lighten($yellow, 80);
+}
+
+.owl-item {
+	display: flex;
+	justify-content: center;
 }

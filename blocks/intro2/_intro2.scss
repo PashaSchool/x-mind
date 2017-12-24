@@ -1,9 +1,14 @@
 .intro-wrapper-text {
-	padding: 20px 150px 35px 150px;
+	padding: 10px;
+	@include breakpoint("iphone") {
+		padding: 20px 60px 35px 60px;
+	}
+	@include breakpoint("mobile") {
+		padding: 20px 150px 35px 150px;
+	}
 }
 
 .header {
-
 	&__text-h {
 		font-weight: bold;
 		font-size: 26px;
