@@ -251,8 +251,11 @@ body {
     background-image: url(../img/uku.png); }
 
 .timer-wrapper {
-  height: 550px;
+  height: 150px;
   background-color: #f5b633; }
+  @media (min-width: 767px) {
+    .timer-wrapper {
+      height: 550px; } }
 
 .timer {
   width: 100%;
@@ -274,14 +277,19 @@ body {
   font-size: 24px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: 0 1px;
+  border-radius: 12px; }
   @media (min-width: 321px) {
+    .time-box {
+      width: 35px;
+      height: 60px;
+      font-size: 32px; } }
+  @media (min-width: 767px) {
     .time-box {
       width: 68px;
       height: 102px;
-      font-size: 75px;
-      margin: 0 6px;
-      border-radius: 12px; } }
+      font-size: 75px; } }
 
 #days, #hours, #minutes {
   margin-right: none;
@@ -289,12 +297,11 @@ body {
   #days:after, #hours:after, #minutes:after {
     content: ':';
     font-size: 24px;
-    color: #fff;
+    color: #3a3a3a;
     display: flex;
     align-items: center;
-    padding: 0;
-    background-color: #3a3a3a; }
-  @media (min-width: 321px) {
+    padding: 0; }
+  @media (min-width: 767px) {
     #days, #hours, #minutes {
       margin-right: 10px; }
       #days:after, #hours:after, #minutes:after {
@@ -334,37 +341,54 @@ body {
   height: 460px; }
 
 .tickets-wrapper {
-  display: none; }
+  display: flex;
+  padding: 30px 0;
+  justify-content: center; }
+  @media (min-width: 767px) {
+    .tickets-wrapper {
+      padding: 75px 0; } }
 
 .ticket-box {
-  width: 830px;
+  width: 90%;
+  max-width: 830px;
   background-color: #e4e4e4;
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 321px) {
+    .ticket-box {
+      width: 80%; } }
+  @media (min-width: 767px) {
+    .ticket-box {
+      width: 90%;
+      flex-direction: row; } }
 
 .label-side {
   background-color: #e4abf0;
-  width: 86px;
+  width: 100%;
   position: relative; }
-  .label-side:after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    display: block;
-    position: absolute;
-    transform: rotate(45deg);
-    right: -4px;
-    bottom: -5px; }
-  .label-side:before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    transform: rotate(45deg);
-    display: block;
-    position: absolute;
-    right: -4px;
-    top: -5px; }
+  @media (min-width: 767px) {
+    .label-side {
+      width: 86px; }
+      .label-side:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        transform: rotate(45deg);
+        right: -4px;
+        bottom: -5px; }
+      .label-side:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        transform: rotate(45deg);
+        display: block;
+        position: absolute;
+        right: -4px;
+        top: -5px; } }
 
 .ticket-label {
   width: 100%;
@@ -372,25 +396,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 2px dotted #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 2px dotted #fff; }
+  @media (min-width: 767px) {
+    .ticket-label {
+      border-right: 2px dotted #fff; } }
   .ticket-label__text {
     color: #fff;
     font-size: 40px;
     display: block;
     letter-spacing: 3px;
-    transform: rotate(270deg); }
+    transform: rotate(0deg); }
+    @media (min-width: 767px) {
+      .ticket-label__text {
+        transform: rotate(270deg); } }
 
 .ticket-content {
   width: 100%;
   justify-content: space-between;
   display: flex;
-  background-color: #d7d7d7; }
+  background-color: #d7d7d7;
+  flex-direction: column; }
+  @media (min-width: 767px) {
+    .ticket-content {
+      flex-direction: row; } }
   .ticket-content__ticket {
-    width: 33%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #e4e4e4; }
+    background-color: #e4e4e4;
+    margin-bottom: 10px; }
+    @media (min-width: 767px) {
+      .ticket-content__ticket {
+        width: 33%;
+        margin-bottom: 0; } }
   .ticket-content__ticket-header {
     padding: 20px 0;
     font-size: 18px;

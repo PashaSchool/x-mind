@@ -1,44 +1,56 @@
 .tickets-wrapper {
-	display: none;
-	// @include breakpoint("iphone") {
-	// padding: 75px 0;
-	// display: flex;
-	// justify-content: center;
-	// }
+	display: flex;
+	padding: 30px 0;
+	justify-content: center;
+	@include breakpoint("mobile") {
+		padding: 75px 0;
+	}
 }
 
 .ticket-box {
-	width: 830px;
-	// height: 285px;
+	width: 90%;
+	max-width: 830px;
 	background-color: $grey;
 	display: flex;
+	flex-direction: column;
+	@include breakpoint("iphone") {
+		width: 80%;
+	}
+	@include breakpoint("mobile") {
+		width: 90%;
+		flex-direction: row;
+	}
 }
 
 .label-side {
 	background-color: $pink;
-	width: 86px;
+	width: 100%;
 	position: relative;
-	&:after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		background-color: #fff;
-		display: block;
-		position: absolute;
-		transform: rotate(45deg);
-		right: -4px;
-		bottom: -5px;
-	}
-	&:before {
-		content: '';
-		width: 10px;
-		height: 10px;
-		background-color: #fff;
-		transform: rotate(45deg);
-		display: block;
-		position: absolute;
-		right: -4px;
-		top: -5px;
+	@include breakpoint("mobile") {
+		width: 86px;
+		&:after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			display: block;
+			position: absolute;
+			transform: rotate(45deg);
+			right: -4px;
+			bottom: -5px;
+			
+		}
+		&:before {
+			content: '';
+			width: 10px;
+			height: 10px;
+			background-color: #fff;
+			transform: rotate(45deg);
+			display: block;
+			position: absolute;
+			right: -4px;
+			top: -5px;
+		}
 	}
 }
 .ticket-label {
@@ -47,14 +59,20 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-right: 2px dotted #fff;
 	overflow: hidden;
+	border-bottom: 2px dotted #fff;
+	@include breakpoint("mobile") {
+		border-right: 2px dotted #fff;
+	}
 	&__text {
 		color: #fff;
 		font-size: 40px;
 		display: block;
 		letter-spacing: 3px;
-		transform: rotate(270deg);
+		transform: rotate(0deg);
+		@include breakpoint("mobile") {
+			transform: rotate(270deg);
+		}
 	}
 }
 
@@ -63,11 +81,20 @@
 	justify-content: space-between;
 	display: flex;
 	background-color: darken($grey, 5);
+	flex-direction: column;
+	@include breakpoint("mobile") {
+		flex-direction: row;
+	}
 	&__ticket {
-		width: 33%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		background-color: $grey;
+		margin-bottom: 10px;
+		@include breakpoint("mobile") {
+			width: 33%;
+			margin-bottom: 0;
+		}
 	}
 
 	&__ticket-header {

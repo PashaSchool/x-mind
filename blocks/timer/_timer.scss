@@ -1,7 +1,8 @@
 .timer-wrapper {
-	height: 550px;
+	height: 150px;
 	background-color: $yellow;
-	@include breakpoint("iphone") {
+	@include breakpoint("mobile") {
+		height: 550px;
 	}
 }
 
@@ -28,12 +29,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 0 1px;
+	border-radius: 12px;
 	@include breakpoint("iphone") {
+		width: 35px;
+		height: 60px;
+		font-size: 32px;
+	}
+	@include breakpoint("mobile") {
 		width: 68px;
 		height: 102px;
 		font-size: 75px;
-		margin: 0 6px;
-		border-radius: 12px;
 	}
 }
 
@@ -43,14 +49,14 @@
 	&:after {
 		content: ':';
 		font-size: 24px;
-		color: #fff;
+		color:$dark;
 		display: flex;
 		align-items: center;
 		padding: 0;
-		background-color: $dark;
+		// background-color: $dark;
 
 	}
-	@include breakpoint("iphone") {
+	@include breakpoint("mobile") {
 		margin-right: 10px;
 		&:after {
 			content: ':';
